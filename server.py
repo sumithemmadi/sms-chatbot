@@ -2,15 +2,12 @@ from flask import Flask
 import subprocess as sp
 import json
 
-contacts = sp.getoutput('termux-contact-list')
-
-
 output = sp.getoutput('termux-notification-list')
-
+jsonOutput = json.dumps(message)
 app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return print(len(contacts))
+    return print(len(jsonOutput))
 if __name__ == "__main__":
     app.run()
