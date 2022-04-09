@@ -4,9 +4,6 @@ import json
 
 contacts = sp.getoutput('termux-contact-list')
 
-contacts = json.load(file)
-print(len(contacts))
-file.close()
 
 output = sp.getoutput('termux-notification-list')
 
@@ -14,6 +11,6 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return output
+    return contacts
 if __name__ == "__main__":
     app.run()
