@@ -5,7 +5,7 @@ import json
 contacts = sp.getoutput('termux-contact-list')
 
 contacts = json.load(file)
-print(contacts.length)
+print(len(contacts))
 file.close()
 
 output = sp.getoutput('termux-notification-list')
