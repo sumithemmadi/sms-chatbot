@@ -12,11 +12,13 @@ sessionId =  uuid.uuid4()
 
 print("loading contacts")
 os.system("termux-contact-list > contacts.json")
-with open('contacts.json', 'r') as contactList:
-  data = json.load(contactList)
+with open('contacts.json', 'r') as contactListFile:
+  contactList = json.load(contactListFile)
 
 for contact in contactList:
     print(len(contact))
+
+print("running")
 
 while 1 == 1:
     output = sp.getoutput('termux-notification-list')
