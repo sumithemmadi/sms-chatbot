@@ -1,0 +1,2 @@
+PROJECTID="Your dialogflow projectId"
+GOOGLE_APPLICATION_CREDENTIALS="Path to the google application credentials"
