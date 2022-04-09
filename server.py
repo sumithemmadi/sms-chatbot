@@ -3,13 +3,16 @@ import subprocess as sp
 import json
 
 
-app = Flask(__name__)
+output = sp.getoutput('termux-notification-list')
+jsonOutput = json.loads(output)
 
+app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    output = sp.getoutput('termux-notification-list')
-    jsonOutput = json.loads(output)
-    return jsonOutput
+
+    return output[0]
+
+
 if __name__ == "__main__":
     app.run()
