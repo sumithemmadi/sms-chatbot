@@ -4,5 +4,5 @@ import json
 
 output = sp.getoutput('termux-notification-list')
 jsonOutput = json.dumps(output)
-print(jsonOutput[0])
+print(jsonOutput)
 
