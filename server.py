@@ -8,6 +8,6 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return print(len(jsonOutput))
+    return len(jsonOutput)
 if __name__ == "__main__":
     app.run()
