@@ -7,5 +7,4 @@ jsonOutput = json.dumps(output)
 # print(output[0])
 
 for i in output:
-    print(output[i].packageName)
-    
+    print(output[i])
