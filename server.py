@@ -1,5 +1,12 @@
 from flask import Flask
 import subprocess as sp
+import json
+
+contacts = sp.getoutput('termux-contact-list')
+
+contacts = json.load(file)
+print(contacts.length)
+file.close()
 
 output = sp.getoutput('termux-notification-list')
 
